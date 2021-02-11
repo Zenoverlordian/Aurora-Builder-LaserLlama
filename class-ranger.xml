@@ -256,7 +256,7 @@
         </description>
         <sheet display="false" />
         <rules>
-            <select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype, !ID_WOTC_ARCHETYPE_RANGER_BEAST_MASTER" />
+            <select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype, !ID_WOTC_ARCHETYPE_RANGER_HUNTER, !ID_WOTC_ARCHETYPE_RANGER_BEAST_MASTER" />
         </rules>
     </element>
     <element name="Ability Score Improvement" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_CLASS_FEATURE_RANGER_ASI">
