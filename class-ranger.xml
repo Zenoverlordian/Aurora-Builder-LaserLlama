@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!--Updated VERSION 3.2.0-->
+<!--Updated VERSION 3.4.0-->
 <elements>
     <element name="Ranger" type="Class" source="laserllama's Alternate Ranger" id="ID_LASERLL_CLASS_RANGER">
         <description>
@@ -158,7 +158,7 @@
     </element>
     <element name="Favored Foe" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_CLASS_FEATURE_RANGER_FAVORED_FOE">
         <description>
-            <p>Your mystical bond with nature allows you to place a mystical mark on a creature, designating them as your favored foe. Beginning at 2nd level, when you hit a creature with a weapon attack, you can expend a 1st-level spell slot to mark the creature as your favored foe. Each time you hit your favored foe with a weapon attack (including the attack that marked the target) you deal an additional 1d4 damage.</p>
+            <p>Your bond with nature allows you to place a mystical mark on a creature, designating them as your favored foe. Beginning at 2nd level, when you hit a creature with a weapon attack, you can expend a 1st-level spell slot to mark the creature as your favored foe. Each time you hit your favored foe with a weapon attack (including the attack used to mark it) you deal an additional 1d4 damage of the weapon's damage type.</p>
             <p class="indent">You can expend higher-level spell slots when you mark a creature as your favored foe, increasing the additional damage to the amount indicated in the table below.</p>
             <p class="indent">The creature remains your favored foe for one minute, or until it is dead. If you mark another creature as your favored foe, the effect immediately ends for the previous creature. This bonus does not stack with the one granted by the hunter's mark spell.</p>
             <table>
@@ -256,7 +256,7 @@
         </description>
         <sheet display="false" />
         <rules>
-            <select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype, !ID_WOTC_ARCHETYPE_RANGER_HUNTER, !ID_WOTC_ARCHETYPE_RANGER_BEAST_MASTER" />
+            <select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype, !ID_WOTC_ARCHETYPE_RANGER_BEAST_MASTER" />
         </rules>
     </element>
     <element name="Ability Score Improvement" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_CLASS_FEATURE_RANGER_ASI">
@@ -360,220 +360,329 @@
 
     <!--Survivalist Knacks-->
 
-    <element name="Herbalist" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST">
-        <supports>Survivalist Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
-        <description>
-            <p>You have learned to use the fruits of the earth to create healing poultices. You gain proficiency with the herbalism kit.</p>
-            <p class="indent">At the end of a long rest, you can scour the land around you for ingredients and create one potion of healing. This potion retains its potency for a number of days equal to your proficiency bonus, after which it spoils and becomes useless.</p>
-        </description>
-        <sheet>
-            <description>At the end of a long rest, you can scour the land around you for ingredients and create one potion of healing. This potion retains its potency for{{proficiency}} days, after which it spoils and becomes useless.</description>
-        </sheet>
-        <rules>
-            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
-        </rules>
-    </element>
-    <element name="Leave No Trace" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_LEAVE_NO_TRACE">
-        <supports>Survivalist Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
-        <description>
-            <p>You have mastered the art of covering your tracks. While moving at a normal speed you leave no trace of your movement, produce no tracks or scent, and you cannot be tracked by nonmagical means unless you wish to be.</p>
-        </description>
-        <sheet>
-            <description>While moving at a normal speed you leave no trace of your movement, produce no tracks or scent, and you cannot be tracked by nonmagical means unless you wish to be.</description>
-        </sheet>
-    </element>
-    <element name="Outdoorsman" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_OUTDOORSMAN">
-        <supports>Survivalist Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
-        <description>
-            <p>There are few natural obstacles that you cannot overcome. You ignore difficult terrain imposed by natural environments, such as forest undergrowth, snow drifts, or marshlands.</p>
-        </description>
-        <sheet>
-            <description>You ignore difficult terrain imposed by natural environments, such as forest undergrowth, snow drifts, or marshlands.</description>
-        </sheet>
-    </element>
-    <element name="Wild Intuition" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_WILD_INTUITION">
-        <supports>Survivalist Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
-        <description>
-            <p>Your sharpened senses react to danger at a moments notice. You gain a bonus to your initiative rolls equal to your Wisdom modifier (minimum of 1), and you cannot be surprised.</p>
-        </description>
-        <sheet>
-            <description>You gain a bonus to your initiative rolls of {{wisdom:modifier}} (minimum of 1), and you cannot be surprised.</description>
-        </sheet>
-    </element>
-    <element name="Fleet of Foot" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_FLEET_FOOT">
-        <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 3</prerequisite>
-        <requirements>[level:ranger:3]</requirements>
-        <description>
-            <p>Once in your sights, you pursue your quarries relentlessly. You can take the Dash action as a bonus action on your turn.</p>
-        </description>
-        <sheet>
-            <description>You can take the Dash action as a bonus action on your turn.</description>
-        </sheet>
-    </element>
-    <element name="Primal Companion" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_PRIMAL_COMPANION">
-        <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 3</prerequisite>
-        <requirements>[level:ranger:3]</requirements>
-        <description>
-            <p>You have formed a bond with a minor nature spirit. You learn the find familiar spell, and it counts as a ranger spell for you. You always have this spell prepared, but it doesn't count against the total number of spells you prepare each day.</p>
-            <div class="reference">
-                <div element="ID_PHB_SPELL_FIND_FAMILIAR" />
-            </div>
-        </description>
-        <sheet>
-            <description>You learn the find familiar spell, and it counts as a ranger spell for you. You always have this spell prepared, but it doesn't count against the total number of spells you prepare each day.</description>
-        </sheet>
-        <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_FIND_FAMILIAR" />
-        </rules>
-    </element>
-    <element name="Silent Stalker" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_SILENT_STALKER">
-        <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 3</prerequisite>
-        <requirements>[level:ranger:3]</requirements>
-        <description>
-            <p>You have learned to hunt your prey while remaining unseen. You can take the Hide action as a bonus action on your turn.</p>
-        </description>
-        <sheet>
-            <description>You can take the Hide action as a bonus action on your turn.</description>
-        </sheet>
-    </element>
     <element name="Alpine Adept" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_ALPINE_ADEPT">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 6</prerequisite>
+        <prerequisite>6th level ranger</prerequisite>
         <requirements>[level:ranger:6]</requirements>
         <description>
-            <p>You surmount overland obstacles like the most surefooted beasts of the land. You gain a 30 foot climb speed, and you can use your reaction to reduce any falling damage you take by an amount equal to your ranger level.</p>
-            <p class="indent">If you have a climb speed from another feature, your climb speed increases by 10 feet.</p>
+            <p><em>Prerequisite:</em> 6th level ranger</p>
+            <p>You surmount mountainous heights like the most surefooted beasts of the land. You gain a 30 foot climbing speed, and you can use your reaction to reduce any falling damage you take by an amount equal to your ranger level.</p>
+            <p class="indent">If you already have a climbing speed from another feature, your climbing speed increases by 10 feet.</p>
         </description>
         <sheet>
-            <description> You gain a climb speed of {{speed:climb}}, and you can use your reaction to reduce any falling damage you take by {{level:ranger}}.</description>
+            <description action="Reaction">You can use your reaction to reduce any falling damage you take by {{level:ranger}}.</description>
         </sheet>
         <rules>
             <stat name="speed:climb" value="20" bonus="base" />
             <stat name="speed:climb" value="10" />
         </rules>
     </element>
+
     <element name="Aquatic Adept" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_AQUATIC_ADEPT">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 6</prerequisite>
+        <prerequisite>6th level ranger</prerequisite>
         <requirements>[level:ranger:6]</requirements>
         <description>
-            <p>You have learned to move through the water like the swiftest creatures of the sea. You gain a 30 foot swim speed, and you can hold your breath for up to one hour.</p>
-            <p class="indent">If you have a swim speed from another feature, your swim speed increases by 10 feet.</p>
+            <p><em>Prerequisite:</em> 6th level ranger</p>
+            <p>You have learned to move through the water like the swiftest creatures of the sea. You gain a 30 foot swimming speed, and you can hold your breath for up to 1 hour while underwater.</p>
+            <p class="indent">If you already have a swimming speed from another feature, your swimming speed increases by 10 feet.</p>
         </description>
         <sheet>
-            <description>You gain a swim speed of {{speed:swim}}, and you can hold your breath for up to one hour.</description>
+            <description>You can hold your breath for up to 1 hour while underwater.</description>
         </sheet>
         <rules>
             <stat name="speed:swim" value="20" bonus="base" />
             <stat name="speed:swim" value="10" />
         </rules>
     </element>
-    <element name="Iron Physique" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_IRON_PHYSIQUE">
+
+    <element name="Explorer 1" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_EXPLORER1">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 6</prerequisite>
-        <requirements>[level:ranger:6]</requirements>
+        <prerequisite></prerequisite>
+        <requirements>[level:ranger:1]</requirements>
         <description>
-            <p>You can brace yourself to absorb the impact of incoming blows. As a bonus action, you can grant yourself temporary hit points equal to your Constitution modifier (minimum of 1).</p>
+            <p>You have spent your life learning the ways of the wilderness, and it is rare that you lose your way. You, and any of your companions, cannot become lost, except by magical means, while traveling in natural environments.</p>
         </description>
         <sheet>
-            <description action="Bonus Action">As a bonus action, you can grant yourself {{constitution:modifier}} temporary hit points (minimum of 1).</description>
+            <description>You, and any of your companions, cannot become lost, except by magical means, while traveling in natural environments.</description>
         </sheet>
     </element>
-    <element name="Strider" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER">
+    <element name="Explorer 2" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_EXPLORER2">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 6</prerequisite>
-        <requirements>[level:ranger:6]</requirements>
+        <prerequisite>6th level ranger, Explorer 1</prerequisite>
+        <requirements>[level:ranger:6], ID_LASERLL_SURVIVALIST_KNACKS_EXPLORER1</requirements>
         <description>
-            <p>You can surmount almost any obstacle that would block your path. Your movement speed increases by 10 feet, and you ignore the effects of difficult terrain, including difficult terrain imposed by spells and other magical effects.</p>
+            <p><em>Prerequisite:</em> 6th level ranger, Explorer 1</p>
+            <p>At the end of each long rest, you can attune to your present environment. Examples include, but are not limited to: arctic, coast, desert, forest, grassland, mountain, or swamp. While in your attuned environment you gain the following benefits:</p>
+            <ul>
+                <li>You have advantage on Intelligence and Wisdom checks related to the native plants, animals, or ecosystem.</li>
+                <li>You find twice as much food when foraging or hunting.</li>
+                <li>You cannot be surprised unless you are incapacitated.</li>
+                <li>You gain a bonus to your initiative rolls equal to your Wisdom modifier (minimum of 1).</li>
+            </ul>
         </description>
         <sheet>
-            <description>Your movement speed increases by 10 feet, and you ignore the effects of difficult terrain, including difficult terrain imposed by spells and other magical effects.</description>
+            <description>At the end of each long rest, you can attune to your present environment. While in your attuned environment you gain the following benefits: You have advantage on Intelligence and Wisdom checks related to the native plants, animals, or ecosystem. You find twice as much food when foraging or hunting. You cannot be surprised unless you are incapacitated. You gain a bonus to your initiative rolls of {{wisdom:modifier}} (minimum of 1).</description>
+        </sheet>
+    </element>
+    
+    <element name="Herbalist 1" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST1">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite></prerequisite>
+        <requirements>[level:ranger:1]</requirements>
+        <description>
+            <p>You have a deep knowledge of plants and their healing properties. You have advantage on Intelligence (Nature) checks to identify the medicinal properties of plants, and Wisdom (Medicine) checks made to stabilize creatures.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on Intelligence (Nature) checks to identify the medicinal properties of plants, and Wisdom (Medicine) checks made to stabilize creatures.</description>
+        </sheet>
+    </element>
+    <element name="Herbalist 2" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST2">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>3rd level ranger, Herbalist 1</prerequisite>
+        <requirements>[level:ranger:3], ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST1</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 3rd level ranger, Herbalist 1</p>
+            <p>You have learned to use the fruits of the earth to create healing poultices. You gain proficiency with the herbalism kit.</p>
+            <p class="indent">At the end of a long rest, you can use a herbalism kit and local plants to create one potion of healing. This potion retains its potency for a number of days equal to your proficiency bonus, after which it spoils and becomes inert.</p>
+        </description>
+        <sheet>
+            <description>At the end of a long rest, you can use a herbalism kit and local plants to create one potion of healing. This potion retains its potency for {{proficiency}} days, after which it spoils and becomes inert.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+        </rules>
+    </element>
+    <element name="Herbalist 3" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST3">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>6th level ranger, Herbalist 2</prerequisite>
+        <requirements>[level:ranger:6], ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST2</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 6th level ranger, Herbalist 2</p>
+            <p>You can use your knowledge of local plant life to soothe your allies. If you, and up to five creatures who you touch, spend at least one Hit Die to regain hit points at the end of the short rest, each of those creatures regains an extra 1d8 hit points.</p>
+        </description>
+        <sheet>
+            <description>If you, and up to five creatures who you touch, spend at least one Hit Die to regain hit points at the end of the short rest, each of those creatures regains an extra 1d8 hit points.</description>
+        </sheet>
+    </element>
+
+    <element name="Natural Regeneration" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_NATURAL_REGENERATION">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>14th level ranger</prerequisite>
+        <requirements>[level:ranger:14]</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 14th level ranger</p>
+            <p>You can draw on the surrounding environment to replenish your mystical power. At the end of a short rest, you can choose to recover expended spell slots of a combined level equal to or less than your Wisdom modifier (minimum of 1).</p>
+            <p class="indent">Once you use this feature you must complete a long rest before you can use it again.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">At the end of a short rest, you can choose to recover expended spell slots of a combined level equal to or less than {{wisdom:modifier}} (minimum of 1).</description>
+        </sheet>
+    </element>
+
+    <element name="Slayer 1" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_SLAYER1">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>3rd level ranger</prerequisite>
+        <requirements>[level:ranger:3]</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 3rd level ranger</p>
+            <p>Once you have a quarry in your sights it is rare that they escape. You have advantage on any Wisdom (Perception) and Wisdom (Survival) checks to track your favored foe.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on any Wisdom (Perception) and Wisdom (Survival) checks to track your favored foe.</description>
+        </sheet>
+    </element>
+    <element name="Slayer 2" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_SLAYER2">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>6th level ranger, Slayer 1</prerequisite>
+        <requirements>[level:ranger:6], ID_LASERLL_SURVIVALIST_KNACKS_SLAYER1</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 6th level ranger, Slayer 1</p>
+            <p>Your tracking abilities have become supernaturally accurate. You always know the exact direction of your favored foe while you are on the same plane of existence.</p>
+        </description>
+        <sheet>
+            <description>You always know the exact direction of your favored foe while you are on the same plane of existence.</description>
+        </sheet>
+    </element>
+    <element name="Slayer 3" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_SLAYER3">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>14th level ranger, Slayer 2</prerequisite>
+        <requirements>[level:ranger:14], ID_LASERLL_SURVIVALIST_KNACKS_SLAYER2</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 14th level ranger, Slayer 2</p>
+            <p>Once per turn, when you hit your favored foe with a weapon attack, you can force it to make a Constitution saving throw in addition to the normal damage of the attack. On a failed save, it is blinded, deafened, frightened, poisoned, or restrained (your choice) until the start of your next turn.</p>
+        </description>
+        <sheet>
+            <description>Once per turn, when you hit your favored foe with a weapon attack, you can force it to make a Constitution saving throw in addition to the normal damage of the attack. On a failed save, it is blinded, deafened, frightened, poisoned, or restrained (your choice) until the start of your next turn.</description>
+        </sheet>
+    </element>
+
+    <element name="Stalker 1" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STALKER1">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite></prerequisite>
+        <requirements>[level:ranger:1]</requirements>
+        <description>
+            <p>You are a master at covering your tracks. While moving at a normal pace you, and up to five other creatures you are traveling with, produce no tracks or scent, and you cannot be tracked by mundane means unless you wish to be.</p>
+        </description>
+        <sheet>
+            <description>While moving at a normal pace you, and up to five other creatures you are traveling with, produce no tracks or scent, and you cannot be tracked by mundane means unless you wish to be.</description>
+        </sheet>
+    </element>
+    <element name="Stalker 2" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STALKER2">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>3rd level ranger, Stalker 1</prerequisite>
+        <requirements>[level:ranger:3], ID_LASERLL_SURVIVALIST_KNACKS_STALKER1</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 3rd level ranger, Stalker 1</p>
+            <p>You have learned to hunt your prey while remaining unseen. You can take the Hide action as a bonus action on your turn.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">You can take the Hide action as a bonus action on your turn.</description>
+        </sheet>
+    </element>
+    <element name="Stalker 3" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STALKER3">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>9th level ranger, Stalker 2</prerequisite>
+        <requirements>[level:ranger:9], ID_LASERLL_SURVIVALIST_KNACKS_STALKER2</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 9th level ranger, Stalker 2</p>
+            <p>You can conceal yourself from even the most advanced magic. You are always under the effects of the nondetection spell, and you cannot be tracked divination magic or other magical means unless you wish to be.</p>
+        </description>
+        <sheet>
+            <description>You are always under the effects of the nondetection spell, and you cannot be tracked divination magic or other magical means unless you wish to be.</description>
+        </sheet>
+    </element>
+    <element name="Stalker 4" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STALKER4">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>14th level ranger, Stalker 3</prerequisite>
+        <requirements>[level:ranger:14], ID_LASERLL_SURVIVALIST_KNACKS_STALKER3</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 14th level ranger, Stalker 3</p>
+            <p>You can ward yourself with nature magic to briefly disappear from sight. When you take the Hide action on your turn, you, along with anything you are wearing, carrying, or have equipped, becomes invisible until the start of your next turn.</p>
+            <p class="indent">This invisibility ends early if you attack or cast a spell.</p>
+        </description>
+        <sheet>
+            <description>When you take the Hide action on your turn, you, along with anything you are wearing, carrying, or have equipped, becomes invisible until the start of your next turn. This invisibility ends early if you attack or cast a spell.</description>
+        </sheet>
+    </element>
+
+    <element name="Strider 1" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER1">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite></prerequisite>
+        <requirements>[level:ranger:1]</requirements>
+        <description>
+            <p>There are few natural obstacles that you cannot overcome, or guide others through safely. You ignore the effects of difficult terrain imposed by natural environments, such as forest undergrowth, snow drifts, swamp, or marshlands.</p>
+            <p class="indent">Also, you, and up to five other creatures you are traveling with, do not have your travel slowed by difficult terrain.</p>
+        </description>
+        <sheet>
+            <description>You ignore the effects of difficult terrain imposed by natural environments, such as forest undergrowth, snow drifts, swamp, or marshlands. Also, you, and up to five other creatures you are traveling with, do not have your travel slowed by difficult terrain.</description>
+        </sheet>
+    </element>
+    <element name="Strider 2" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER2">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>3rd level ranger, Strider 1</prerequisite>
+        <requirements>[level:ranger:3], ID_LASERLL_SURVIVALIST_KNACKS_STRIDER1</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 3rd level ranger, Strider 1</p>
+            <p>Once in your sights, you pursue your quarries relentlessly. You can take the Dash action as a bonus action on your turn.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">You can take the Dash action as a bonus action on your turn.</description>
+        </sheet>
+    </element>
+    <element name="Strider 3" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER3">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>6th level ranger, Strider 2</prerequisite>
+        <requirements>[level:ranger:6], ID_LASERLL_SURVIVALIST_KNACKS_STRIDER2</requirements>
+        <description>
+            <p><em>Prerequisite:</em> 6th level ranger, Strider 2</p>
+            <p>You can surmount almost any obstacle that would block your path. Your base movement speed increases by 10 feet, and you ignore the effects of difficult terrain imposed by spells, magical phenomena, and any other magical effects.</p>
+        </description>
+        <sheet>
+            <description>You ignore the effects of difficult terrain imposed by spells, magical phenomena, and any other magical effects.</description>
         </sheet>
         <rules>
             <stat name="speed" value="10" />
         </rules>
     </element>
-    <element name="Imperceptible Form" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_IMPERCEPTIBLE_FORM">
+    <element name="Strider 4" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER4">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 9</prerequisite>
-        <requirements>[level:ranger:9]</requirements>
+        <prerequisite>14th level ranger, Strider 3</prerequisite>
+        <requirements>[level:ranger:14], ID_LASERLL_SURVIVALIST_KNACKS_STRIDER3</requirements>
         <description>
-            <p>You have learned to conceal yourself from the most advanced magic. You are always under the effects of the nondetection spell, and you cannot be tracked by magical or mundane means unless you wish to be.</p>
-            <div class="reference">
-                <div element="ID_PHB_SPELL_NONDETECTION" />
-            </div>
+            <p><em>Prerequisite:</em> 14th level ranger, Strider 3</p>
+            <p>You move through the world unhindered by even the most powerful magic and restraints. You are always under the effects of the freedom of movement spell while conscious.</p>
         </description>
         <sheet>
-            <description>You are always under the effects of the nondetection spell, and you cannot be tracked by magical or mundane means unless you wish to be.</description>
+            <description>You are always under the effects of the freedom of movement spell while conscious.</description>
         </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" />
+        </rules>
     </element>
-    <element name="Mystic Camouflage" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_MYSTIC_CAMOUFLAGE">
+
+    <element name="Survivor 1" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR1">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 9</prerequisite>
-        <requirements>[level:ranger:9]</requirements>
+        <prerequisite>6th level ranger</prerequisite>
+        <requirements>[level:ranger:6]</requirements>
         <description>
-            <p>You can ward yourself with nature magic to briefly disappear from sight. As a bonus action on your turn, you, along with anything you are wearing, carrying, or have equipped, can turn invisible until the start of your next turn.</p>
-            <p class="indent">You can use this ability a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest.</p>
+            <p><em>Prerequisite:</em> 6th level ranger</p>
+            <p>Your time in the wilds has hardened your body, and you can brace yourself to absorb incoming blows. As a bonus action on your turn, you can grant yourself temporary hit points equal to your Constitution modifier (minimum of 1).</p>
         </description>
         <sheet>
-            <description action="Bonus Action" usage="{{wisdom:modifier}}/Long Rest">As a bonus action on your turn, you, along with anything you are wearing, carrying, or have equipped, can turn invisible until the start of your next turn.</description>
+            <description action="Bonus Action">As a bonus action on your turn, you can grant yourself {{constitution:modifier}} temporary hit points (minimum of 1).</description>
         </sheet>
     </element>
-    <element name="Relentless Survivor" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_RELENTLESS_SURVIVOR">
+    <element name="Survivor 2" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR2">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 9</prerequisite>
-        <requirements>[level:ranger:9]</requirements>
+        <prerequisite>9th level ranger, Survivor 1</prerequisite>
+        <requirements>[level:ranger:9], ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR1</requirements>
         <description>
-            <p>You have trained your body to recover more rapidly then most. When you expend Hit Dice to regain hit points at the end of a short rest, you gain a bonus to each Hit Die roll equal to your Wisdom modifier (minimum of 1).</p>
+            <p><em>Prerequisite:</em> 9th level ranger, Survivor 1</p>
+            <p>You have trained your body to recover more rapidly than most. When you expend Hit Dice to regain hit points at the end of a short rest, you gain a bonus to each Hit Die roll equal to your Wisdom modifier (minimum of 1).</p>
         </description>
         <sheet>
-            <description>When you expend Hit Dice to regain hit points at the end of a short rest, you gain a bonus to each Hit Die roll equal to {{wisdom:modifier}} (minimum of 1).</description>
+            <description>When you expend Hit Dice to regain hit points at the end of a short rest, you gain a bonus to each Hit Die roll of {{wisdom:modifier}} (minimum of 1).</description>
         </sheet>
     </element>
-    <element name="Feral Tenacity" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_FERAL_TENACITY">
+    <element name="Survivor 3" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR3">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 14</prerequisite>
-        <requirements>[level:ranger:14]</requirements>
+        <prerequisite>14th level ranger, Survivor 2</prerequisite>
+        <requirements>[level:ranger:14], ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR2</requirements>
         <description>
+            <p><em>Prerequisite:</em> 9th level ranger, Survivor 2</p>
             <p>You persevere even in the face of death. When you make a death saving throw you gain a bonus to the roll equal to your Wisdom modifier (minimum of 1). If this increases the total to 20 or higher, you gain the benefits of rolling a 20 on the d20.</p>
         </description>
         <sheet>
-            <description>When you make a death saving throw you gain a bonus to the roll equal to {{wisdom:modifier}} (minimum of 1). If this increases the total to 20 or higher, you gain the benefits of rolling a 20 on the d20.</description>
+            <description>When you make a death saving throw you gain a bonus to the roll of {{wisdom:modifier}} (minimum of 1). If this increases the total to 20 or higher, you gain the benefits of rolling a 20 on the d20.</description>
         </sheet>
     </element>
-    <element name="Natural Regeneration" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_NATURAL_REGENERATION">
+
+    <element name="Wild Insights 1" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_WILD_INSIGHTS1">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 14</prerequisite>
-        <requirements>[level:ranger:14]</requirements>
+        <prerequisite></prerequisite>
+        <requirements>[level:ranger:1]</requirements>
         <description>
-            <p>You draw power from the natural world. At the end of a short rest, you can recover expended spell slots of a combined level equal to or less than your Wisdom modifier (minimum of 1).</p>
+            <p>You have a natural way with the wild animals of the world. You can communicate simple ideas to beasts using sounds and gestures, and you have advantage on any Wisdom (Animal Handling) checks you make targeting animals that are already friendly towards you.</p>
         </description>
         <sheet>
-            <description>At the end of a short rest, you can recover expended spell slots of a combined level equal to or less than {{wisdom:modifier}} (minimum of 1).</description>
+            <description>You can communicate simple ideas to beasts using sounds and gestures, and you have advantage on any Wisdom (Animal Handling) checks you make targeting animals that are already friendly towards you.</description>
         </sheet>
     </element>
-    <element name="Peerless Hunter" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_PEERLESS_HUNTER">
+    <element name="Wild Insights 2" type="Class Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_SURVIVALIST_KNACKS_WILD_INSIGHTS2">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite>Ranger level 14</prerequisite>
-        <requirements>[level:ranger:14]</requirements>
+        <prerequisite>3rd level ranger, Wild Insights 1</prerequisite>
+        <requirements>[level:ranger:3], ID_LASERLL_SURVIVALIST_KNACKS_WILD_INSIGHTS1</requirements>
         <description>
-            <p>When you hit your favored foe with a weapon attack, you can choose to forgo the normal weapon damage, and force the creature to make a Constitution saving throw instead. On a failed save, it takes 8d8 damage of the weapon's damage type and is inflicted with one of the following conditions (your choice): blinded, deafened, frightened, or restrained. The effect lasts for one minute. On successful save, the creature takes half damage and doesn't suffer the additional effect.</p>
-            <p class="indent">Once you use this feature you must complete a short or long rest before you can use it again.</p>
+            <p><em>Prerequisite:</em> 3rd level ranger, Wild Insights 1</p>
+            <p>Your familiarity with the natural world has allowed you to bond you with a minor spirit of nature. You learn the find familiar spell. It counts as a ranger spell for you and you always have it prepared, but it doesn't count against the total number of spells you prepare each day. When you cast this spell your familiar is a fey creature.</p>
         </description>
         <sheet>
-            <description usage="1/Short Rest">When you hit your favored foe with a weapon attack, you can choose to forgo the normal weapon damage, and force the creature to make a Constitution saving throw instead. On a failed save, it takes 8d8 damage of the weapon's damage type and is inflicted with one of the following conditions (your choice): blinded, deafened, frightened, or restrained. The effect lasts for one minute. On successful save, the creature takes half damage and doesn't suffer the additional effect.</description>
+            <description>When you cast the find familiar spell your familiar is a fey creature.</description>
         </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_FIND_FAMILIAR" spellcasting="Ranger" prepared="true" />
+        </rules>
     </element>
 
     <!--Archetypes-->
@@ -610,18 +719,18 @@
                     <td>Spell</td>
                   </tr>
                 </thead>
-                <tr><td>3rd</td><td><em>heroism</em></td></tr>
+                <tr><td>3rd</td><td><em>beast bond</em></td></tr>
                 <tr><td>5th</td><td><em>warding bond</em></td></tr>
-                <tr><td>9th</td><td><em>haste</em></td></tr>
+                <tr><td>9th</td><td><em>protection from energy</em></td></tr>
                 <tr><td>13th</td><td><em>death ward</em></td></tr>
                 <tr><td>17th</td><td><em>awaken</em></td></tr>
               </table>            
         </description>
         <sheet display="false" />
         <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_HEROISM" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_BEAST_BOND" level="3" spellcasting="Ranger" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_WARDING_BOND" level="5" spellcasting="Ranger" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_HASTE" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_ENERGY" level="9" spellcasting="Ranger" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="13" spellcasting="Ranger" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_AWAKEN" level="17" spellcasting="Ranger" prepared="true" />
         </rules>
@@ -672,7 +781,7 @@
         </sheet>
     </element>
 
-    <element name="Drake Warden" type="Archetype" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_DRAKE_WARDEN">
+    <element name="Drakebound" type="Archetype" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_DRAKE_WARDEN">
         <supports>Ranger Archetype</supports>
         <description>
             <p>Dragons are some of the most powerful creatures in the multiverse, and even the most well-read scholars are unsure of the full magical potential of ancient dragons. Sometimes, for reasons that may be mysterious, a powerful ancient dragon will call upon a ranger who has proved themselves worthy of draconic power. These rare few are granted the boon of a minor draconic companion, known as a drake.</p>
@@ -696,10 +805,10 @@
             <grant type="Archetype Feature" id="ID_LASERLL_ARCHETYPE_FEATURE_DRAKE_WARDEN_BOND_PERFECTED" level="15" />
         </rules>
     </element>
-    <element name="Drake Warden Magic" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_DRAKE_WARDEN_MAGIC">
+    <element name="Drakebound Magic" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_DRAKE_WARDEN_MAGIC">
         <description>
             <p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Drake Warden Spells table. The spell counts as a ranger spell for you, but it doesn’t count against the number of ranger spells you can prepare.</p>
-            <h5>DRAKE WARDEN SPELLS</h5>
+            <h5>DRAKEBOUND SPELLS</h5>
               <table>
                 <thead>
                   <tr>
@@ -802,20 +911,20 @@
             <p>With their varied skills, rangers can take up many roles; guide, naturalist, tracker, or guardian, but at their core rangers are all hunters. Rangers that lean into their role as a deadly predator, honing their combat skills, are known as hunters. These warriors accept their place as a bulwark between civilization and the terrors of the wilderness. Walking this path, they master specialized techniques to better combat the threats they face. True hunters will face any foe; marauding gnolls, grotesque trolls, or terrible dragons</p>
             <p class="indent"></p>
             <div element="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MAGIC" />
-            <div element="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_HUNTERS_PREY" />
-            <div element="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_DEFENSIVE_TACTICS" />
-            <div element="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MULTIATTACK" />
-            <div element="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_SUPERIOR_HUNTERS_DEFENSES" />
+            <div element="ID_WOTC_ARCHETYPEFEATURE_RANGER_HUNTERS_PREY" />
+			<div element="ID_WOTC_ARCHETYPEFEATURE_RANGER_DEFENSIVE_TACTICS" />
+			<div element="ID_WOTC_ARCHETYPEFEATURE_RANGER_MULTIATTACK" />
+			<div element="ID_WOTC_ARCHETYPEFEATURE_RANGER_SUPERIOR_HUNTERS_DEFENSE" />
         </description>
         <sheet display="false">
             <description>Rangers that lean into their role as a deadly predator</description>
         </sheet>
         <rules>
             <grant type="Archetype Feature" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MAGIC" level="3" />
-            <grant type="Archetype Feature" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_HUNTERS_PREY" level="3" />
-            <grant type="Archetype Feature" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_DEFENSIVE_TACTICS" level="7" />
-            <grant type="Archetype Feature" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MULTIATTACK" level="11" />
-            <grant type="Archetype Feature" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_SUPERIOR_HUNTERS_DEFENSES" level="15" />
+            <grant type="Archetype Feature" id="ID_WOTC_ARCHETYPEFEATURE_RANGER_HUNTERS_PREY" level="3" />
+			<grant type="Archetype Feature" id="ID_WOTC_ARCHETYPEFEATURE_RANGER_DEFENSIVE_TACTICS" level="7" />
+			<grant type="Archetype Feature" id="ID_WOTC_ARCHETYPEFEATURE_RANGER_MULTIATTACK" level="11" />
+			<grant type="Archetype Feature" id="ID_WOTC_ARCHETYPEFEATURE_RANGER_SUPERIOR_HUNTERS_DEFENSE" level="15" />
         </rules>
     </element>
     <element name="Hunter Magic" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MAGIC">
@@ -829,201 +938,21 @@
                     <td>Spell</td>
                   </tr>
                 </thead>
-                <tr><td>3rd</td><td><em>faerie fire</em></td></tr>
+                <tr><td>3rd</td><td><em>ensnaring strike</em></td></tr>
                 <tr><td>5th</td><td><em>blindness/deafness</em></td></tr>
-                <tr><td>9th</td><td><em>haste</em></td></tr>
+                <tr><td>9th</td><td><em>slow</em></td></tr>
                 <tr><td>13th</td><td><em>locate creature</em></td></tr>
                 <tr><td>17th</td><td><em>hold monster</em></td></tr>
               </table>            
         </description>
         <sheet display="false" />
         <rules>
-            <grant type="Spell" id="ID_PHB_SPELL_FAERIE_FIRE" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_ENSNARING_STRIKE" level="3" spellcasting="Ranger" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_BLINDNESS_DEAFNESS" level="5" spellcasting="Ranger" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_HASTE" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SLOW" level="9" spellcasting="Ranger" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" level="13" spellcasting="Ranger" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_HOLD_MONSTER" level="17" spellcasting="Ranger" prepared="true" />
         </rules>
-    </element>
-    <element name="Hunter's Prey" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_HUNTERS_PREY">
-        <description>
-            <p>When you adopt the hunter archetype, you learn specialized tactics depending on the type of monsters you hunt. At 3rd level, you gain one of the following features of your choice:</p>
-            <p class="indent"><strong><em>Colossus Slayer.</em></strong> You strike true, even against the largest beasts. Once per turn, when you hit a creature that is below it's hit point maximum with a weapon attack, you deal an extra 1d8 damage of the weapon's type to the creature.</p>
-            <p class="indent"><strong><em>Giant Killer.</em></strong> When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.</p>
-            <p class="indent"><strong><em>Horde Breaker.</em></strong> Once per turn, when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.</p>
-            <p class="indent"><strong><em>Urban Hunter.</em></strong> You have learned to hunt in urban areas as well as the wild. You gain proficiency in the Perception and Survival skills, and your proficiency bonus is doubled for any ability check you make that uses either of these skills while in an urban environment.</p>
-        </description>
-        <sheet display="false" />
-        <rules>
-            <select type="Archetype Feature" name="Hunter's Prey" supports="LLHuntersPrey" />
-        </rules>
-    </element>
-    <element name="Colossus Slayer" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_HUNTERS_PREY_COLOSSUS">
-        <supports>LLHuntersPrey</supports>
-        <description>
-            <p>You strike true, even against the largest beasts. Once per turn, when you hit a creature that is below it's hit point maximum with a weapon attack, you deal an extra 1d8 damage of the weapon's type to the creature.</p>
-        </description>
-        <sheet>
-            <description>Once per turn, when you hit a creature that is below it's hit point maximum with a weapon attack, you deal an extra 1d8 damage of the weapon's type to the creature.</description>
-        </sheet>
-    </element>
-    <element name="Giant Killer" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_HUNTERS_PREY_GIANT">
-        <supports>LLHuntersPrey</supports>
-        <description>
-            <p>When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.</p>
-        </description>
-        <sheet>
-            <description action="Reaction">When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.</description>
-        </sheet>
-    </element>
-    <element name="Horde Breaker" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_HUNTERS_PREY_HORDE">
-        <supports>LLHuntersPrey</supports>
-        <description>
-            <p>Once per turn, when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.</p>
-        </description>
-        <sheet>
-            <description>Once per turn, when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.</description>
-        </sheet>
-    </element>
-    <element name="Urban Hunter" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_HUNTERS_PREY_URBAN">
-        <supports>LLHuntersPrey</supports>
-        <description>
-            <p>You have learned to hunt in urban areas as well as the wild. You gain proficiency in the Perception and Survival skills, and your proficiency bonus is doubled for any ability check you make that uses either of these skills while in an urban environment.</p>
-        </description>
-        <sheet>
-            <description>You gain proficiency in the Perception and Survival skills, and your proficiency bonus is doubled for any ability check you make that uses either of these skills while in an urban environment.</description>
-        </sheet>
-        <rules>
-            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
-            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
-        </rules>
-    </element>
-    <element name="Defensive Tactics" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_DEFENSIVE_TACTICS">
-        <description>
-            <p>Your time spent tracking and slaying monsters has taught you to better defend yourself against those threats. At 7th level, you gain one of the following features of your choice:</p>
-            <p class="indent"><strong><em>Escape the Horde.</em></strong> You are adept at defending yourself against large numbers of creatures. Opportunity attacks that target you are made with disadvantage.</p>
-            <p class="indent"><strong><em>Multiattack Defense.</em></strong> When a creature hits you with an attack, you gain a bonus to your Armor Class equal to your proficiency bonus against any attacks made by that creature until the start of your next turn.</p>
-            <p class="indent"><strong><em>Steel Will.</em></strong> Your mind is resilient. You have advantage on saving throws to resist being charmed or frightened.</p>
-            <p class="indent"><strong><em>Unwavering Focus.</em></strong> You have familiarized yourself with the fighting style of your prey. When your favored foe hits you with an attack, you reduce the damage by an amount equal to your Wisdom modifier (minimum of 1).</p>
-        </description>
-        <sheet display="false" />
-        <rules>
-            <select type="Archetype Feature" name="Defensive Tactics" supports="LLDefensiveTactics" />
-        </rules>
-    </element>
-    <element name="Escape the Horde" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_DEFENSIVE_TACTICS_ESCAPE">
-        <supports>LLDefensiveTactics</supports>
-        <description>
-            <p>You are adept at defending yourself against large numbers of creatures. Opportunity attacks that target you are made with disadvantage.</p>
-        </description>
-        <sheet>
-            <description>Opportunity attacks that target you are made with disadvantage.</description>
-        </sheet>
-    </element>
-    <element name="Multiattack Defense" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_DEFENSIVE_TACTICS_MULTIATTACK">
-        <supports>LLDefensiveTactics</supports>
-        <description>
-            <p>When a creature hits you with an attack, you gain a bonus to your Armor Class equal to your proficiency bonus against any attacks made by that creature until the start of your next turn.</p>
-        </description>
-        <sheet>
-            <description>When a creature hits you with an attack, you gain a bonus to your Armor Class of {{proficiency}} against any attacks made by that creature until the start of your next turn.</description>
-        </sheet>
-    </element>
-    <element name="Steel Will" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_DEFENSIVE_TACTICS_STEEL">
-        <supports>LLDefensiveTactics</supports>
-        <description>
-            <p>Your mind is resilient. You have advantage on saving throws to resist being charmed or frightened.</p>
-        </description>
-        <sheet>
-            <description>You have advantage on saving throws to resist being charmed or frightened.</description>
-        </sheet>
-    </element>
-    <element name="Unwavering Focus" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_DEFENSIVE_TACTICS_UNWAVERING">
-        <supports>LLDefensiveTactics</supports>
-        <description>
-            <p>You have familiarized yourself with the fighting style of your prey. When your favored foe hits you with an attack, you reduce the damage by an amount equal to your Wisdom modifier (minimum of 1).</p>
-        </description>
-        <sheet>
-            <description>When your favored foe hits you with an attack, you reduce the damage by {{wisdom:modifier}} (minimum of 1).</description>
-        </sheet>
-    </element>
-    <element name="Multiattack" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MULTIATTACK">
-        <description>
-            <p>Like an apex predator in the wild, your hunting skills have been honed to deadly effectiveness. At 11th level, you gain one of the following features of your choice:</p>
-            <p class="indent"><strong><em>Relentless Pursuit.</em></strong> While your favored foe is within 60 feet of you, and you can see it, you use a bonus action to move your full movement speed towards the creature and make one weapon attack targeting your favored foe.</p>
-            <p class="indent"><strong><em>Volley.</em></strong> As an action, you can make a ranged attack against any number of creatures within 10 feet of a point you can see that is within the range of your weapon. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.</p>
-            <p class="indent"><strong><em>Whirlwind Attack.</em></strong> You can use your action to make a melee attack against any number of creatures within 5 feet of you. You make a separate attack roll for each target.</p>
-        </description>
-        <sheet display="false" />
-        <rules>
-            <select type="Archetype Feature" name="Multiattack" supports="LLMultiattack" />
-        </rules>
-    </element>
-    <element name="Relentless Pursuit" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MULTIATTACK_RELENTLESS">
-        <supports>LLMultiattack</supports>
-        <description>
-            <p>While your favored foe is within 60 feet of you, and you can see it, you use a bonus action to move your full movement speed towards the creature and make one weapon attack targeting your favored foe.</p>
-        </description>
-        <sheet>
-            <description action="Bonus Action">While your favored foe is within 60 feet of you, and you can see it, you use a bonus action to move your full movement speed towards the creature and make one weapon attack targeting your favored foe.</description>
-        </sheet>
-    </element>
-    <element name="Volley" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MULTIATTACK_VOLLEY">
-        <supports>LLMultiattack</supports>
-        <description>
-            <p>As an action, you can make a ranged attack against any number of creatures within 10 feet of a point you can see that is within the range of your weapon. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.</p>
-        </description>
-        <sheet>
-            <description action="Action">As an action, you can make a ranged attack against any number of creatures within 10 feet of a point you can see that is within the range of your weapon. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.</description>
-        </sheet>
-    </element>
-    <element name="Whirlwind Attack" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_MULTIATTACK_WHIRLWIND">
-        <supports>LLMultiattack</supports>
-        <description>
-            <p>You can use your action to make a melee attack against any number of creatures within 5 feet of you. You make a separate attack roll for each target.</p>
-        </description>
-        <sheet>
-            <description action="Action">You can use your action to make a melee attack against any number of creatures within 5 feet of you. You make a separate attack roll for each target.</description>
-        </sheet>
-    </element>
-    <element name="Superior Hunter's Defense" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_SUPERIOR_HUNTERS_DEFENSES">
-        <description>
-            <p>You have learned to better defend yourself against your foes. At 15th level, you gain one of the following features:</p>
-            <p class="indent"><strong><em>Evasion.</em></strong> When you are subjected to an effect, such as a red dragon’s fire breath or a lightning bolt spell, that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
-            <p class="indent"><strong><em>Stand Against the Tide.</em></strong> When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature of your choice within range (other than itself).</p>
-            <p class="indent"><strong><em>Uncanny Dodge.</em></strong> When a creature that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.</p>
-        </description>
-        <sheet display="false" />
-        <rules>
-            <select type="Archetype Feature" name="Superior Hunter's Defense" supports="LLSuperior" />
-        </rules>
-    </element>
-    <element name="Evasion" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_SUPERIOR_HUNTERS_DEFENSES_EVASION">
-        <supports>LLSuperior</supports>
-        <description>
-            <p>When you are subjected to an effect, such as a red dragon’s fire breath or a lightning bolt spell, that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
-        </description>
-        <sheet>
-            <description>When you are subjected to an effect, such as a red dragon’s fire breath or a lightning bolt spell, that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</description>
-        </sheet>
-    </element>
-    <element name="Stand Against the Tide" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_SUPERIOR_HUNTERS_DEFENSES_STAND">
-        <supports>LLSuperior</supports>
-        <description>
-            <p>When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature of your choice within range (other than itself).</p>
-        </description>
-        <sheet>
-            <description action="Reaction">When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature of your choice within range (other than itself).</description>
-        </sheet>
-    </element>
-    <element name="Uncanny Dodge" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_HUNTER_SUPERIOR_HUNTERS_DEFENSES_UNCANNY">
-        <supports>LLSuperior</supports>
-        <description>
-            <p>When a creature that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.</p>
-        </description>
-        <sheet>
-            <description action="Reaction">When a creature that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.</description>
-        </sheet>
     </element>
 
     <element name="Sanguine Warrior" type="Archetype" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_SANGUINE_WARRIOR">
@@ -1277,12 +1206,12 @@
     </element>
     <element name="Mage Hunter" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_SPELLBREAKER_MAGE_HUNTER">
         <description>
-            <p>When you adopt this archetype at 3rd level you gain the skills necessary to hunt spellcasters of all kinds. You gain proficiency in the Arcana skill. Any time you make an Intelligence (Arcana) check to recall information about spellcasters or spellcasting, you have advantage on the roll.</p>
+            <p>When you adopt this archetype at 3rd level you gain the skills necessary to hunt spellcasters of all kinds. You gain proficiency in the Arcana skill. Any time you make an Intelligence (Arcana) check to recall information about a spellcaster, their method of casting spells, or the effect of a spell, you can add double your proficiency bonus to the result of the roll.</p>
             <p class="indent">In addition, you can cast absorb elements as a 1st-level spell a number of times equal to your Wisdom modifier (minimum of once) without expending a spell slot. You regain all expended uses when you finish a long rest.</p>
             <p class="indent">Any time you cast absorb elements, and the first melee weapon attack you make on your next turn is against the creature whose spell you absorbed, you treat the additional damage from absorb elements as it's maximum roll.</p>
         </description>
         <sheet>
-            <description>You gain proficiency in the Arcana skill. Any time you make an Intelligence (Arcana) check to recall information about spellcasters or spellcasting, you have advantage on the roll. In addition, you can cast absorb elements as a 1st-level spell {{wisdom:modifier}} times (minimum of once) without expending a spell slot. You regain all expended uses when you finish a long rest. Any time you cast absorb elements, and the first melee weapon attack you make on your next turn is against the creature whose spell you absorbed, you treat the additional damage from absorb elements as it's maximum roll.</description>
+            <description>You gain proficiency in the Arcana skill. Any time you make an Intelligence (Arcana) check to recall information about a spellcaster, their method of casting spells, or the effect of a spell, you can add double your proficiency bonus to the result of the roll. In addition, you can cast absorb elements as a 1st-level spell {{wisdom:modifier}} times (minimum of once) without expending a spell slot. You regain all expended uses when you finish a long rest. Any time you cast absorb elements, and the first melee weapon attack you make on your next turn is against the creature whose spell you absorbed, you treat the additional damage from absorb elements as it's maximum roll.</description>
         </sheet>
         <rules>
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
@@ -1290,11 +1219,11 @@
     </element>
     <element name="Spellsight" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_SPELLBREAKER_SPELLSIGHT">
         <description>
-            <p>Your training as a Spellbreaker has given you the unique ability to detect the magical ability of other creatures. Upon reaching 3rd level, as an action choose one creature you can see within 60 feet of you. You immediately learn its spellcasting ability (if it has one), and the level of the highest spell the creature can cast.</p>
+            <p>Your training as a Spellbreaker has given you the unique ability to detect the magical ability of other creatures. Upon reaching 3rd level, as an action choose one creature you can see within 60 feet of you. You immediately learn its spellcasting ability (if it has one), if it casts arcane or divine spells, and the level of the highest spell the creature can cast.</p>
             <p class="indent">Once you use this feature you must complete a short or long rest before you can use it again.</p>
         </description>
         <sheet>
-            <description action="Action" usage="1/Short Rest">As an action choose one creature you can see within 60 feet of you. You immediately learn its spellcasting ability (if it has one), and the level of the highest spell the creature can cast.</description>
+            <description action="Action" usage="1/Short Rest">As an action choose one creature you can see within 60 feet of you. You immediately learn its spellcasting ability (if it has one), if it casts arcane or divine spells, and the level of the highest spell the creature can cast.</description>
         </sheet>
     </element>
     <element name="Arcane Defense" type="Archetype Feature" source="laserllama's Alternate Ranger" id="ID_LASERLL_ARCHETYPE_FEATURE_SPELLBREAKER_ARCANE_DEFENSE">
@@ -1578,10 +1507,10 @@
     </element>
     <element name="Binding Strike" type="Companion Trait" source="laserllama's Alternate Ranger" id="ID_LASERLL_BEAST_MASTER_COMPANION_SEA_BINDING_STRIKE">
         <description>
-            <p>When the beast hits a creature with it's Pseudopod attack, it can choose to automatically grapple the target. The creature can use its action to make an Acrobatics or Athletics check against your ranger spell save DC to escape. Until this grapple ends, the beast can’t use this attack on another target.</p>
+            <p>When the beast hits a creature with a Pseudopod attack, it can choose to automatically grapple the target. The escape DC is equal to your spell save DC. Until this grapple ends, the beast can’t use this attack on another target.</p>
         </description>
         <sheet>
-            <description>When the beast hits a creature with it's Pseudopod attack, it can choose to automatically grapple the target. The creature can use its action to make an Acrobatics or Athletics check against your ranger spell save DC to escape. Until this grapple ends, the beast can’t use this attack on another target.</description>
+            <description>When the beast hits a creature with a Pseudopod attack, it can choose to automatically grapple the target. The escape DC is equal to your spell save DC. Until this grapple ends, the beast can’t use this attack on another target.</description>
         </sheet>
     </element>
     <element name="Pseudopod" type="Companion Action" source="laserllama's Alternate Ranger" id="ID_LASERLL_BEAST_MASTER_COMPANION_SEA_PSEUDOPOD">
