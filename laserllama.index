@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>LaserLlama</name>
+		<description>The content from Laserllama on reddit.</description>
+		<author url="https://www.reddit.com/user/LaserLlama">LaserLlama</author>
+		<update version="0.0.7">
+			<file name="laserllama.index" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/laserllama.index" />
+		</update>
+	</info>
+	<files>
+		<file name="source.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/source.xml" />
+    
+		<!-- classes -->
+		<file name="class-savant.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/class-savant.xml" />
+		<file name="class-ranger.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/class-ranger.xml" />
+    
+    <!-- subclasses -->
+    <file name="cleric-domains.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/cleric-domains.xml" />
+    
+	</files>
+</index>
