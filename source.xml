@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="source.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/source.xml" />
+        </update>
+    </info>
+
 	<element name="laserllama's Divine Domains" type="Source" source="laserllama's Divine Domains" id="ID_LASERLL_SOURCE_CDD">
 		<description>
 			<![CDATA[<p>At 1st level, a cleric gains the Divine Domain feature. The following domain options are available to a cleric, in addition to those offered to those in the Player's Handbook: Darkness, Hearth, Luck, Poverty, and Wealth.</p>]]>

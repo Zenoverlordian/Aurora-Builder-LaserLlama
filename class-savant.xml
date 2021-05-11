@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="3.5.0">
+            <file name="class-savant.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/class-savant.xml" />
+        </update>
+    </info>
+
     <!--Version 3.5.0-->
     <element name="Savant" type="Class" source="laserllama's Savant" id="ID_LASERLL_CLASS_SAVANT">
         <description>

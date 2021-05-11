@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!--Updated VERSION 3.4.0-->
 <elements>
+    <info>
+        <name></name>
+        <update version="3.4.0">
+            <file name="class-ranger.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/class-ranger.xml" />
+        </update>
+    </info>
+
     <element name="Ranger" type="Class" source="laserllama's Alternate Ranger" id="ID_LASERLL_CLASS_RANGER">
         <description>
     <p>Rough and wild looking, a grizzled man silently moves through the forest, tracking the band of orc raiders that had moved into the peaceful farmland he protected. Clutching a shortsword in each hand, he leaps out from the cover of the forest, preying on the orcs when they stop to rest. In a flash, he becomes a whirlwind of steel.</p>

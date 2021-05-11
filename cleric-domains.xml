@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
-<!--Last Update 2020-12-10-->
-
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="cleric-domains.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/cleric-domains.xml" />
+        </update>
+    </info>
+
+
     <element name="Darkness Domain" type="Archetype" source="laserllama's Divine Domains" id="ID_LASERLL_CDD_ARCHETYPE_DARKNESS">
         <supports>Divine Domain</supports>
         <description>
