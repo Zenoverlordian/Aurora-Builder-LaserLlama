@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="1.0.0">
+        <update version="1.0.1">
             <file name="cleric-domains.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/cleric-domains.xml" />
         </update>
     </info>
@@ -83,7 +83,7 @@
             <description action="Reaction" usage="{{wisdom:modifier}}/Long rest"> When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing a cloud of darkness to billow around you before the attacker hits or misses. An attacker that can see through magical darkness is immune to this feature. </description>
         </sheet>
     </element>
-    <element name="Channel Divinity: Shadow of the Void" type="Archetype Feature" source="laserllama's Divine Domains" id="ID_LASERLL_CDD_ARCHETYPE_DARKNESS_CD_SHADOW_OF_THE_VOID">
+    <element name="Channel Divinity: Shadow of the Void" type="Archetype Feature" source="laserllama's Divine Domains" id="ID_LASERLL_CDD_ARCHETYPE_DARKNESS_SHADOW_OF_THE_VOID">
         <description>
             <p>Starting at 2nd level, you can use your Channel Divinity to conjure eldritch darkness, banishing light and dealing necrotic damage to your foes.</p>
             <p class="indent">As an action, you present your holy symbol, and any light, magical or mundane, within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes necrotic damage equal to 2d10 + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected.</p>
