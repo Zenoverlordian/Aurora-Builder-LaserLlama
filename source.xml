@@ -7,7 +7,7 @@
         </update>
     </info>
 
-	<element name="laserllama's Divine Domains" type="Source" source="laserllama's Divine Domains" id="ID_LASERLL_SOURCE_CDD">
+	<element name="laserllama's Divine Domains" type="Source" source="Core" id="ID_LASERLL_SOURCE_CDD">
 		<description>
 			<![CDATA[<p>At 1st level, a cleric gains the Divine Domain feature. The following domain options are available to a cleric, in addition to those offered to those in the Player's Handbook: Darkness, Hearth, Luck, Poverty, and Wealth.</p>]]>
 		</description>
@@ -22,7 +22,7 @@
 			<set name="release">20180422</set>
 		</setters>
 	</element>
-	<element name="laserllama's artificer specialties" type="Source" source="laserllama's artificer specialties" id="ID_LASERLL_SOURCE_AS">
+	<element name="laserllama's artificer specialties" type="Source" source="Core" id="ID_LASERLL_SOURCE_AS">
 		<description>
 			<![CDATA[<p> At 3rd level, an artificer gains the artificer specialty feature. The following options are available to an artificer, in addition to the options offered in Eberron: Rising from the Last War; Aeronaut, Archivist, Composer, and Dungeoneer. </p>]]>
 		</description>
@@ -37,7 +37,7 @@
 			<set name="release">20180422</set>
 		</setters>
 	</element>
-	<element name="laserllama's Alternate Ranger" type="Source" source="laserllama's Alternate Ranger" id="ID_LASERLL_SOURCE_RANGER">
+	<element name="laserllama's Alternate Ranger" type="Source" source="Core" id="ID_LASERLL_SOURCE_RANGER">
 		<description>
 			<![CDATA[<p> An alternate version of the ranger class for the world's greatest role playing game. Combine the best of the original ranger and my own personal adjustments to become the Ultimate Hunter </p>]]>
 		</description>
@@ -52,7 +52,7 @@
 			<set name="release">20180422</set>
 		</setters>
 	</element>
-	<element name="laserllama's Savant" type="Source" source="laserllama's Savant" id="ID_LASERLL_SOURCE_SAVANT">
+	<element name="laserllama's Savant" type="Source" source="Core" id="ID_LASERLL_SOURCE_SAVANT">
 		<description>
 			<![CDATA[<p> A Brilliant Intelligence-based, non-magical class! Use your wits to aid your allies and outsmart your foes.</p>]]>
 		</description>
@@ -67,14 +67,14 @@
 			<set name="release">20180422</set>
 		</setters>
 	</element>
-	<element name="laserllama's Sacred Oaths" type="Source" source="laserllama's Sacred Oaths" id="ID_LASERLL_SOURCE_SACRED_OATHS">
+	<element name="laserllama's Sacred Oaths" type="Source" source="Core" id="ID_LASERLL_SOURCE_SACRED_OATHS">
 		<description>
 			<![CDATA[<p> Six new Sacred Oaths for the Paladin Class in the World's Greatest Roleplaying Game.</p>]]>
 		</description>
 		<setters>
 			<set name="abbreviation">LASERLL</set>
 			<set name="url">https://www.gmbinder.com/share/-M0nB-sB2ALlUbVzm9nY</set>
-			<set name="image">https://preview.redd.it/tmg6te5aznl61.jpg?width=2550&format=pjpg&auto=webp&s=8c5068f869903e5b4df05a74e1eef20bf2b2f61b</set>
+			<set name="image">https://styles.redditmedia.com/t5_d3mwk/styles/profileIcon_zziwq0k9for51.png</set>
 			<set name="author" abbreviation="LASERLL" url="https://www.gmbinder.com/profile/laserllama">laserllama</set>
 			<set name="official">false</set>
 			<set name="supplement">false</set>
@@ -82,7 +82,7 @@
 			<set name="release">20180422</set>
 		</setters>
 	</element>
-	<element name="laserllama's " type="Source" source="laserllama's " id="ID_LASERLL_SOURCE_">
+	<element name="laserllama's " type="Source" source="Core" id="ID_LASERLL_SOURCE_">
 		<description>
 			<![CDATA[<p> details </p>]]>
 		</description>
