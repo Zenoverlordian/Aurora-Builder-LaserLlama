@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="1.0.1">
+            <file name="paladin-oaths.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/paladin-oaths.xml" />
+        </update>
+    </info>
+
+    <element name="Oath of Beauty" type="Archetype" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_OATH_OF_BEAUTY">
+        <supports>Sacred Oath</supports>
+        <description>
+            <p>Paladins who swear the Oath of Beauty hold themselves to a lofty standard of excellence. They strive to appear as beautiful gleaming beacons of elegance. Some use the power of their graceful visage to inspire and give hope to the downtrodden. Others turn inwards and become obsessed with their appearance and standing in society, using the power of their Oath to seduce, deceive, and intimidate those beneath them.</p>
+			<h5 class="caption">TENETS OF BEAUTY</h5>
+            <p>Those who swear this Oath do so for both altruistic and selfish purposes, but they share they all share these tenets.</p>
+            <p class="indent"><strong><em>Elegance.</em></strong> You must hold yourself to the highest societal standards, expectations, and customs. Reputation can open many doors that remain closed to those of ill repute.</p>
+            <p class="indent"><strong><em>Grace.</em></strong> You are a cut above the poor and working class, and you must exemplify that dignity in your combat techniques, leisurely pursuits, and all your public actions.</p>
+            <p class="indent"><strong><em>Perfection.</em></strong> Those who swear this Oath should strive always to improve themselves in not only their skill in combat, but their personal appearance and reputation.</p>
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_BEAUTY_CHANNEL_DIVINITY" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BEAUTY_OATH_SPELLS" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_AURA_OF_ELEGANCE" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_IMPOSING_VISAGE" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_PARAGON_OF_BEAUTY" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BEAUTY_CHANNEL_DIVINITY" level="3" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BEAUTY_OATH_SPELLS" level="3" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_AURA_OF_ELEGANCE" level="7" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_IMPOSING_VISAGE" level="15" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_PARAGON_OF_BEAUTY" level="20" />
+        </rules>
+    </element>
+    <element name="Channel Divinity" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BEAUTY_CHANNEL_DIVINITY">
+        <description>
+            <p>When you take this oath at 3rd level, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><b><i>Otherworldly Elegance.</i></b> As an action, you touch your holy symbol, and divinely enhance your beauty. For the next hour, whenever you make a Deception, Intimidation, or Persuasion check, you can treat a roll of 9 or lower on the d20 as a 10.</p>
+			<p class="indent"><b><i>Quell the Defiler.</i></b> As a reaction, when a creature you can see within 30 feet attacks you, you can force the attacker to make a Wisdom saving throw. On a failed save, their attack misses, and they are charmed by you until the end of your next turn. The charm ends early if you attack the creature.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BEAUTY_CHANNEL_DIVINITY_OTHERWORLDLY_ELEGANCE" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BEAUTY_CHANNEL_DIVINITY_QUELL_THE_DEFILER" />
+        </rules>
+    </element>
+    <element name="Channel Divinity: Otherworldly Elegance" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BEAUTY_CHANNEL_DIVINITY_OTHERWORLDLY_ELEGANCE">
+        <description>
+            <p>As an action, you touch your holy symbol, and divinely enhance your beauty. For the next hour, whenever you make a Deception, Intimidation, or Persuasion check, you can treat a roll of 9 or lower on the d20 as a 10</p>
+        </description>
+        <sheet alt="Sacred Duel" action="Action" usage="Channel Divinity">
+            <description>As an action, you touch your holy symbol, and divinely enhance your beauty. For the next hour, whenever you make a Deception, Intimidation, or Persuasion check, you can treat a roll of 9 or lower on the d20 as a 10</description>
+        </sheet>
+    </element>
+    <element name="Channel Divinity: Quell the Defiler" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BEAUTY_CHANNEL_DIVINITY_QUELL_THE_DEFILER">
+        <description>
+            <p>As an action, you touch your holy symbol, and divinely enhance your beauty. For the next hour, whenever you make a Deception, Intimidation, or Persuasion check, you can treat a roll of 9 or lower on the d20 as a 10</p>
+        </description>
+        <sheet alt="Sacred Duel" action="Reaction" usage="Channel Divinity">
+            <description>when a creature you can see within 30 feet attacks you, you can force the attacker to make a Wisdom saving throw. On a failed save, their attack misses, and they are charmed by you until the end of your next turn. The charm ends early if you attack the creature.</description>
+        </sheet>
+    </element>
+    <element name="Oath Spells" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BEAUTY_OATH_SPELLS">
+		<description>
+			<p>You gain oath spells at the paladin levels listed.</p>
+			<h5>OATH OF BEAUTY SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><em>charm person, disguise self</em></td></tr>
+				<tr><td>5th</td><td><em>enthrall, suggestion</em></td></tr>
+				<tr><td>9th</td><td><em>fear, hypnotic pattern</em></td></tr>
+				<tr><td>13th</td><td><em>charm monster, compulsion</em></td></tr>
+				<tr><td>17th</td><td><em>dominate person, seeming</em></td></tr>
+			</table>      
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ENTHRALL" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SUGGESTION" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FEAR" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_CHARM_MONSTER" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_COMPULSION" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DOMINATE_PERSON" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SEEMING" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+    <element name="Aura of Elegance" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_AURA_OF_ELEGANCE">
+        <description>
+            <p>Your elegant visage and personality bends the weak to your whims. Starting at 7th level, when you force a creature within 10 feet of you to make a saving throw to resist the effects of an enchantment or illusion spell, they have disadvantage on their saving throw. In addition, you have advantage on Deception, Intimidation, and Persuasion checks that target friendly creatures within 10 feet of you.</p>
+            <p class="indent">At 18th level the range of these abilities becomes 30 feet.</p>
+        </description>
+        <sheet>
+            <description>when you force a creature within {{Aura of Elegance:range}} feet of you to make a saving throw to resist the effects of an enchantment or illusion spell, they have disadvantage on their saving throw. In addition, you have advantage on Deception, Intimidation, and Persuasion checks that target friendly creatures within 10 feet of you</description>
+        </sheet>
+        <rules>
+            <stat name="Aura of Elegance:range" value="10" />
+            <stat name="Aura of Elegance:range" value="20" level="18" />
+        </rules>
+    </element>
+    <element name="Imposing Visage" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_IMPOSING_VISAGE">
+        <description>
+            <p>Beginning at 15th level, your beauty is terrible for your enemies to behold. As a reaction when you are hit by an attack, you can reveal divine beauty and grant yourself a bonus to your Armor Class equal to your Charisma modifier (minimum of +1), until the the start of your next turn.</p>
+            <p class="indent">You can use this feature a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet action="Reaction" usage="{{imposing visage:usage}}/Long Rest">
+            <description>when you are hit by an attack, you can reveal divine beauty and grant yourself a bonus {{imposing visage:bonus AC}} Armor Class, until the the start of your next turn.</description>
+        </sheet>
+        <rules>
+            <stat name="imposing visage:bonus AC" value="1" bonus="base" />
+            <stat name="imposing visage:bonus AC" value="charisma:modifier" bonus="base" />
+            <stat name="imposing visage:usage" value="1" bonus="base" />
+            <stat name="imposing visage:usage" value="charisma:modifier" bonus="base" />
+        </rules>
+    </element>
+    <element name="Paragon of Beauty" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_PARAGON_OF_BEAUTY">
+        <description>
+            <p>At 20th level, you can use an action on your turn to reveal the wondrous, yet terrible, divine beauty within your soul. For the next minute, you gain the following benefits:</p>
+            <ul>
+                <li>You are immune to the charmed condition.</li>
+                <li>When you hit a creature with a weapon attack you deal additional damage equal to your Charisma modifier.</li>
+                <li>You can cast charm person as a 1st-level spel as a bonus action on each turn, without expending a spell slot.</li>
+            </ul>
+            <p class="indent">Once you use this feature, you must finish a long rest before you can use it again, unless you expend a 5th-level spell slot to use it again.</p>
+        </description>
+        <sheet action="Action" usage="1/Long Rest">
+            <description>you can turn to reveal the wondrous, yet terrible, divine beauty within your soul. For the next minute, you gain the following benefits: immune to the charmed condition, additional {{charisma:modifier}} damage when you hit a creature with a weapon attack. You can cast charm person as a 1st-level spel as a bonus action on each turn, without expending a spell slot. Once you use this feature, you must finish a long rest before you can use it again, unless you expend a 5th-level spell slot to use it again.</description>
+        </sheet>
+    </element>
+
+    <element name="Oath of the Blade" type="Archetype" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_OATH_OF_THE_BLADE">
+        <supports>Sacred Oath</supports>
+        <description>
+            <p>Paladins who swear the Oath of the Blade seek to become masterful warriors and paragons of battle. Sometimes called blade masters, these elite warriors devote their lives to mastering the armaments of war. Some blade masters serve as mercenaries, others as guardians or bodyguards. No matter their station, they are always on the lookout for skilled warriors to measure their own combat prowess against.</p>
+			<h5 class="caption">TENETS OF THE BLADE</h5>
+            <p>Though Blade Paladins vary in motivation and alignment, they all uphold the same tenets of swordsmanship.</p>
+            <p class="indent"><strong><em>Fair Play.</em></strong> True warriors will fight on a level playing field. Do not stoop to crushing enemies and adversaries who are beneath you unless you first level the playing field.</p>
+            <p class="indent"><strong><em>Respect.</em></strong> Those who hold to the Tenets of the Blade, and all warriors who prove themselves in combat, deserve your respect as a fellow combatant, no matter their motivations.</p>
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_BLADE_CHANNEL_DIVINITY" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_COMBAT_SUPERIORITY" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BLADE_OATH_SPELLS" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_MASTERFUL_TECHNIQUE" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_COUNTERATTACK" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_WARRIOR_OF_LEGEND" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BLADE_CHANNEL_DIVINITY" level="3" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_COMBAT_SUPERIORITY" level="3" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BLADE_OATH_SPELLS" level="3" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_MASTERFUL_TECHNIQUE" level="7" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_COUNTERATTACK" level="15" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_WARRIOR_OF_LEGEND" level="20" />
+        </rules>
+    </element>
+    <element name="Channel Divinity" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BLADE_CHANNEL_DIVINITY">
+        <description>
+            <p>When you take this oath at 3rd level, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><b><i>Sacred Duel.</i></b> As bonus action, you can hold aloft your holy symbol and initiate a sacred duel. One willing, but hostile, creature can enter into this duel with you, marking you both as duelists. For the duration, both duelists have resistance to all damage, except damage from the other duelist.</p>
+            <p class="indent">This sacred duel lasts for one minute, or until one of the creatures who entered into the duel falls unconscious.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BLADE_CHANNEL_DIVINITY_SACRED_DUEL" />
+        </rules>
+    </element>
+    <element name="Channel Divinity: Sacred Duel" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_BLADE_CHANNEL_DIVINITY_SACRED_DUEL">
+        <description>
+            <p>As bonus action, you can hold aloft your holy symbol and initiate a sacred duel. One willing, but hostile, creature can enter into this duel with you, marking you both as duelists. For the duration, both duelists have resistance to all damage, except damage from the other duelist.</p>
+            <p class="indent">This sacred duel lasts for one minute, or until one of the creatures who entered into the duel falls unconscious.</p>
+        </description>
+        <sheet alt="Sacred Duel" action="Bonus Action" usage="Channel Divinity">
+            <description>you can hold aloft your holy symbol and initiate a sacred duel. One willing, but hostile, creature can enter into this duel with you, marking you both as duelists. For the duration, both duelists have resistance to all damage, except damage from the other duelist. This sacred duel lasts for one minute, or until one of the creatures who entered into the duel falls unconscious.</description>
+        </sheet>
+    </element>
+    <element name="Combat Superiority" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_COMBAT_SUPERIORITY">
+        <description>
+            <p>You can utilize advanced martial techniques. When you take this Oath at 3rd level, you gain the following features:</p>
+            <p class="indent"><b>Maneuvers.</b> You learn two maneuvers of your choice from the list of Battle Master maneuvers found in the Player's Handbook. You can use only one maneuver per attack. When you gain a level in this class you can replace one maneuver you know with another maneuver of your choice.</p>
+            <p class="indent"><b>Superiority Dice.</b> You have three superiority dice, which are d6s for you. You must expend a superiority die to use once of your maneuvers. You regain all of your expended superiority dice when you finish a short or long rest.</p>
+            <p class="indent"><b>Saving Throws.</b> Some of your maneuvers require your target to make a saving throw to resist the maneuver's effects. The saving throw DC is calculated as follows:</p>
+            <center>
+                <p><strong>Maneuver save DC</strong> = 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice).</p>
+            </center>
+        </description>
+        <sheet>
+			<description>{{martial adept:dice:amount}}d{{martial adept:dice:size}} superiority dice / short rest. DC {{martial adept:dc}}</description>
+		</sheet>
+        <rules>
+            <stat name="martial adept:ability" value="strength:modifier" bonus="martial adept:ability" />
+			<stat name="martial adept:ability" value="dexterity:modifier" bonus="martial adept:ability" />
+
+			<stat name="martial adept:dc" value="8" />
+			<stat name="martial adept:dc" value="proficiency" />
+			<stat name="martial adept:dc" value="martial adept:ability" />
+
+			<stat name="martial adept:dice:amount" value="3" />
+			<stat name="martial adept:dice:size" value="6" />
+
+			<select type="Archetype Feature" name="Martial Adept" supports="Maneuver,Battle Master" number="2" />
+        </rules>
+    </element>
+    <element name="Oath Spells" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BLADE_OATH_SPELLS">
+		<description>
+			<p>You gain oath spells at the paladin levels listed.</p>
+			<h5>OATH OF THE BLADE SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><em>zephyr strike</em></td></tr>
+				<tr><td>5th</td><td><em>cloud of daggers</em></td></tr>
+				<tr><td>9th</td><td><em>haste</em></td></tr>
+				<tr><td>13th</td><td><em>freedom of movement</em></td></tr>
+				<tr><td>17th</td><td><em>steel wind strike</em></td></tr>
+			</table>      
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_XGTE_SPELL_ZEPHYR_STRIKE" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CLOUD_OF_DAGGERS" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HASTE" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_STEEL_WIND_STRIKE" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+    <element name="Masterful Technique" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_MASTERFUL_TECHNIQUE">
+        <description>
+            <p>Your skills with the armaments of war have improved. Starting at 7th level in this class, you gain an additional superiority die, and all your superiority dice become d8s. You also learn two additional maneuvers of your choice.</p>
+            <p class="indent">Upon reaching 18th level, your skills increase even further, rivaling even warriors of legend. You gain another superiority die (for a total of five), and your superiority dice become d10s. You also learn two more maneuvers of your choice.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+			<stat name="martial adept:dice:amount" value="1" />
+			<stat name="martial adept:dice:size" value="2" />
+			<select type="Archetype Feature" name="Martial Adept" supports="Maneuver,Battle Master" number="2" />
+
+			<stat name="martial adept:dice:amount" value="1" level="18" />
+			<stat name="martial adept:dice:size" value="2" level="18" />
+			<select type="Archetype Feature" name="Martial Adept" supports="Maneuver,Battle Master" number="2" level="18" />
+        </rules>
+    </element>
+    <element name="Counterattack" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_COUNTERATTACK">
+        <description>
+            <p>Your skills as a duelist allow you to strike back at those who dare to strike you. Beginning at 15th level, when a creature within 5 feet of you hits you with an attack, you can use your reaction to immediately make a melee weapon attack against that creature, with advantage on your attack roll.</p>
+        </description>
+        <sheet action="Reaction">
+            <description>when a creature within 5 feet of you hits you with an attack, you can use your reaction to immediately make a melee weapon attack against that creature, with advantage on your attack roll.</description>
+        </sheet>
+    </element>
+    <element name="Warrior of Legend" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_WARRIOR_OF_LEGEND">
+        <description>
+            <p>At 20th level, you can you can use a bonus action to enter a trance that enhances your combat skills to legendary levels. For the next minute, each time you make a melee weapon attack you can use one of the maneuvers you know, rolling a d6 in place of expending a superiority die.</p>
+            <p class="indent">This feature ends if you are incapacitated. Once you use this feature, you must finish a long rest before you can use it again, or you expend a 5th-level spell slot to use it again.</p>
+        </description>
+        <sheet action="Bonus Action" usage="1/Long Rest">
+            <description>you can enter a trance that enhances your combat skills to legendary levels. For the next minute, each time you make a melee weapon attack you can use one of the maneuvers you know, rolling a d6 in place of expending a superiority die. This feature ends if you are incapacitated. Once you use this feature, you must finish a long rest before you can use it again, or you expend a 5th-level spell slot to use it again.</description>
+        </sheet>
+    </element>
+
+    <element name="Oath of the Corsair" type="Archetype" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_OATH_OF_THE_CORSAIR">
+        <supports>Sacred Oath</supports>
+        <description>
+            <p>Fearsome warriors of the high seas, Corsair Paladins, swear an Oath to themselves and their crew, and will do whatever it takes to maintain their freedom. Chaotic by nature, these scallywags abhor any laws that aren't their own. While most paladins follow the law of the land or the tenets of their deity, Corsairs follow only laws they have personally agree to.</p>
+            <h5 class="caption">TENETS OF THE BLADE</h5>
+            <p>Though Blade Paladins vary in motivation and alignment, they all uphold the same tenets of swordsmanship.</p>
+            <p class="indent"><strong><em>Bravery.</em></strong> To be a coward is worse then death. Those who don't defend themselves deserve whatever comes. Live in such a way that all will sing of your deeds for years to come.</p>
+            <p class="indent"><strong><em>Freedom.</em></strong> Mortal creatures are meant to be free. Like the fish of the sea, no one should be forced to follow rules that they did not personally agree to or have a voice in creating.</p>
+            <p class="indent"><strong><em>Loyalty.</em></strong> Those that betray their allies are the lowest of low creatures. Traitors must be dealt with swift judgment. Loyal allies are rewarded with glory, prestige, and treasure.</p>
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_CORSAIR_CHANNEL_DIVINITY" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BLADE_OATH_SPELLS" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_AURA_OF_GALLANTRY" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_STRENGTH_OF_THE_SEAS" />
+            <div element="ID_LASERLL_SO_ARCHETYPE_FEATURE_GRAND_CAPTAIN" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_CORSAIR_CHANNEL_DIVINITY" level="3" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BLADE_OATH_SPELLS" level="3" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_AURA_OF_GALLANTRY" level="7" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_STRENGTH_OF_THE_SEAS" level="15" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_GRAND_CAPTAIN" level="20" />
+        </rules>
+    </element>
+    <element name="Channel Divinity" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_CORSAIR_CHANNEL_DIVINITY">
+        <description>
+            <p>When you take this oath at 3rd level, you gain the following two Channel Divinity options.</p>
+			<p class="indent"><b><i>All Hands on Deck.</i></b> As a bonus action, you hold aloft your holy symbol and you bellow an order to your crew. A number of creatures of your choice, equal to your Charisma modifier (minimum of 1), within 30 feet, that can see or hear you, can use their reaction to move up to their full movement speed, without provoking any opportunity attacks.</p>
+			<p class="indent"><b><i>Wrath of the Sea.</i></b> When you use your Divine Smite, you can invoke this Channel Divinity. All weapon and Divine Smite damage becomes cold, lightning, or thunder damage (your choice), and if you roll a 1 or 2 for any of the damage dice you can re-roll those dice, but must use the new result.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_CORSAIR_CHANNEL_DIVINITY_ALL_HANDS_ON_DECK" />
+            <grant type="Archetype Feature" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_CORSAIR_CHANNEL_DIVINITY_WRATH_OF_THE_SEA" />
+        </rules>
+    </element>
+    <element name="Channel Divinity: All Hands on Deck" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_CORSAIR_CHANNEL_DIVINITY_ALL_HANDS_ON_DECK">
+        <description>
+            <p>As a bonus action, you hold aloft your holy symbol and you bellow an order to your crew. A number of creatures of your choice, equal to your Charisma modifier (minimum of 1), within 30 feet, that can see or hear you, can use their reaction to move up to their full movement speed, without provoking any opportunity attacks.</p>
+        </description>
+        <sheet alt="All Hands on Deck" action="Bonus Action" usage="Channel Divinity">
+            <description>you hold aloft your holy symbol and you bellow an order to your crew. {{all hands on deck:count}} creatures of your choice, within 30 feet, that can see or hear you, can use their reaction to move up to their full movement speed, without provoking any opportunity attacks.</description>
+        </sheet>
+        <rules>
+            <stat name="all hands on deck:count" value="1" bonus="base" />
+            <stat name="all hands on deck:count" value="charisma:modifier" bonus="base" />
+        </rules>
+    </element>
+    <element name="Channel Divinity: Wrath of the Sea" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_CORSAIR_CHANNEL_DIVINITY_WRATH_OF_THE_SEA">
+        <description>
+            <p>When you use your Divine Smite, you can invoke this Channel Divinity. All weapon and Divine Smite damage becomes cold, lightning, or thunder damage (your choice), and if you roll a 1 or 2 for any of the damage dice you can re-roll those dice, but must use the new result.When you use your Divine Smite, you can invoke this Channel Divinity. All weapon and Divine Smite damage becomes cold, lightning, or thunder damage (your choice), and if you roll a 1 or 2 for any of the damage dice you can re-roll those dice, but must use the new result.</p>
+        </description>
+        <sheet alt="Wrath of the Sea" action="Bonus Action" usage="Channel Divinity">
+            <description>When you use your Divine Smite, you can invoke this Channel Divinity. All weapon and Divine Smite damage becomes cold, lightning, or thunder damage (your choice), and if you roll a 1 or 2 for any of the damage dice you can re-roll those dice, but must use the new result.</description>
+        </sheet>
+    </element>
+    <element name="Oath Spells" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_PALADIN_BLADE_OATH_SPELLS">
+		<description>
+			<p>You gain oath spells at the paladin levels listed.</p>
+			<h5>OATH OF THE CORSAIR SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><em>fog cloud, zephyr strike</em></td></tr>
+				<tr><td>5th</td><td><em>arcane lock, warding wind</em></td></tr>
+				<tr><td>9th</td><td><em>thunder step, tidal wave</em></td></tr>
+				<tr><td>13th</td><td><em>control water, storm sphere</em></td></tr>
+				<tr><td>17th</td><td><em>control winds, maelstrom</em></td></tr>
+			</table>      
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_FOG_CLOUD" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_ZEPHYR_STRIKE" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_ARCANE_LOCK" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_WARDING_WIND" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_THUNDER_STEP" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_TIDAL_WAVE" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONTROL_WATER" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_STORM_SPHERE" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_CONTROL_WINDS" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_MAELSTROM" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+    <element name="Aura of Gallantry" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_AURA_OF_GALLANTRY">
+        <description>
+            <p>Starting at 7th level you, and friendly creatures within 10 feet of you, have advantage saving throws to resist being grappled, knocked prone, or moved against your will.</p>
+            <p class="indent">At 18th level the range of this aura increases to 30 feet.</p>
+        </description>
+        <sheet>
+            <description level="7">You, and friendly creatures within 10 feet of you, have advantage saving throws to resist being grappled, knocked prone, or moved against your will.</description>
+            <description level="18">You, and friendly creatures within 30 feet of you, have advantage saving throws to resist being grappled, knocked prone, or moved against your will.</description>
+        </sheet>
+    </element>
+    <element name="Strength of the Seas" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_STRENGTH_OF_THE_SEAS">
+        <description>
+            <p>At 15th level, those who strike you are punished for their mutinous actions. When a creature hits you with a melee attack, they take cold, lighting, or thunder damage (your choice) equal to your Charisma modifier (minimum of 1).</p>
+        </description>
+        <sheet>
+            <description>When a creature hits you with a melee attack, they take {{strength of the seas:dmg}} cold, lighting, or thunder damage </description>
+        </sheet>
+        <rules>
+            <stat name="strength of the seas:dmg" value="1" bonus="base" />
+            <stat name="strength of the seas:dmg" value="charisma:modifier" bonus="base" />
+        </rules>
+    </element>
+    <element name="Grand Captain" type="Archetype Feature" source="laserllama's Sacred Oaths" id="ID_LASERLL_SO_ARCHETYPE_FEATURE_GRAND_CAPTAIN">
+        <description>
+            <p>At 20th level, you can embody the wrath of the high seas. As a bonus action, you can transform, becoming terrible as a storm, gaining the following benefits for 1 minute.</p>
+            <ul>
+                <li>You are immune to cold, lightning, and thunder damage.</li>
+                <li>You can cast command as a 1st-level spell, as a bonus action on each turn without expending a spell slot.</li>
+                <li>When you hit an enemy creature with a melee attack, they must make a Strength saving throw or be knocked prone.</li>
+            </ul>
+            <p class="indent">Once you use this feature, you must finish a long rest before you can use it again, unless you expend a 5th-level spell slot to use it again.</p>
+        </description>
+        <sheet action="Bonus Action" usage="1/Long Rest">
+            <description>you can transform, becoming terrible as a storm, gaining the following benefits for 1 minute. You are immune to cold, lightning, and thunder damage. You can cast command as a 1st-level spell, as a bonus action on each turn without expending a spell slot. When you hit an enemy creature with a melee attack, they must make a Strength saving throw or be knocked prone. Once you use this feature, you must finish a long rest before you can use it again, unless you expend a 5th-level spell slot to use it again. </description>
+        </sheet>
+    </element>
+
+</elements>
