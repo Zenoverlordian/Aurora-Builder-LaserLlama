@@ -67,6 +67,21 @@
 			<set name="release">20180422</set>
 		</setters>
 	</element>
+	<element name="laserllama's Sacred Oaths" type="Source" source="Core" id="ID_LASERLL_SOURCE_SACRED_OATHS">
+		<description>
+			<![CDATA[<p> Six new Sacred Oaths for the Paladin Class in the World's Greatest Roleplaying Game.</p>]]>
+		</description>
+		<setters>
+			<set name="abbreviation">LASERLL</set>
+			<set name="url">https://www.gmbinder.com/share/-M0nB-sB2ALlUbVzm9nY</set>
+			<set name="image">https://styles.redditmedia.com/t5_d3mwk/styles/profileIcon_zziwq0k9for51.png</set>
+			<set name="author" abbreviation="LASERLL" url="https://www.gmbinder.com/profile/laserllama">laserllama</set>
+			<set name="official">false</set>
+			<set name="supplement">false</set>
+            <set name="homebrew">true</set>
+			<set name="release">20180422</set>
+		</setters>
+	</element>
 	<element name="laserllama's " type="Source" source="laserllama's " id="ID_LASERLL_SOURCE_">
 		<description>
 			<![CDATA[<p> details </p>]]>
